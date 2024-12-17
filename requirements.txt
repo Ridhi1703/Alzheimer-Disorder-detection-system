@@ -1,0 +1,8 @@
+flask
+flask-wtf 
+joblib
+tensorflow
+numpy
+pillow
+scikit-learn
+pandas

@@ -1,0 +1,154 @@
+:root {
+    --color-dark-blue: #001A6E;
+    --color-medium-blue: #074799;
+    --color-navy: #1B1833;
+    --color-white: #FBFBFB;
+    --color-purple: #402E7A;
+    --color-bright-purple: #4C3BCF;
+    --color-light-blue: #4B70F5;
+    --color-cyan: #3DC2EC;
+    --color-dark-gray: #1A2130;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-medium-blue);
+    color: var(--color-navy);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-white);
+  }
+  
+  .form-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 26, 110, 0.1);
+    padding: 2rem;
+  }
+  
+  .clinical-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+    color: var(--color-dark-blue);
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--color-light-blue);
+    background-color: #f0f4ff;
+    color: var(--color-navy);
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: var(--color-cyan);
+    box-shadow: 0 0 0 2px rgba(61, 194, 236, 0.2);
+  }
+  
+  .submit-btn {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--color-bright-purple);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .submit-btn:hover {
+    background-color: var(--color-light-blue);
+    transform: translateY(-2px);
+  }
+  
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+  
+  .file-input {
+    padding: 0.5rem;
+    background-color: var(--color-white);
+  }
+  
+  .file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 0;
+  }
+  
+  .file-input::before {
+    content: 'Select MRI Image';
+    display: inline-block;
+    background: var(--color-bright-purple);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    outline: none;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 10pt;
+  }
+  
+  .file-input:hover::before {
+    background-color: var(--color-light-blue);
+  }
+  
+  @media (max-width: 768px) {
+    .clinical-form {
+      grid-template-columns: 1fr;
+    }
+    
+    .form-wrapper {
+      padding: 1rem;
+    }
+  }
+  
+  

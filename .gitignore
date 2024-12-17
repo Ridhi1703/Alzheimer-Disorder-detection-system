@@ -1,0 +1,6 @@
+*.log
+*.pyc
+data/
+.venv/
+*.h5
+venv/

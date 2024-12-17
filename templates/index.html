@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/css/styles.css">
+  <title>Alzheimer's Detection System</title>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#models">Models</a></li>
+      <li><a href="#dataset">Dataset</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#research">Research Papers</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="section">
+    <div class="home-container">
+      <!-- Intro Section -->
+      <div class="home-intro">
+        <h1>Welcome to NeuroSense:<br> Unified Platform for Alzheimer's Prediction</h1>
+        <p>
+          Our innovative system leverages advanced machine learning techniques to revolutionize Alzheimer's detection and analysis. 
+          It integrates clinical and multimodal data for accurate disease progression insights, aiming to aid healthcare professionals 
+          and researchers in providing timely interventions and better patient outcomes.
+        </p>
+      </div>
+  
+      <!-- Method Selection Section -->
+      <div class="home-methods">
+        <h2>Choose a Method for Detection</h2>
+        <div class="methods-container">
+          <div class="method-card">
+            <img src="static\images\clinical.jpg" alt="Clinical Assessment Logo" class="method-image">
+            <h3>Clinical Assessment</h3>
+            <p>
+              Analyze clinical data and mental health history to detect Alzheimer's symptoms and progression stages.
+            </p>
+            <a href="/clinical" class="btn">Explore</a>
+          </div>
+          <div class="method-card">
+            <img src="static\images\mri+clin.jpg" alt="Multimodal Prediction Logo" class="method-image">
+            <h3>Multimodal Prediction</h3>
+            <p>
+              Use MRI scans and clinical information for deeper insights into disease progression and cognitive decline.
+            </p>
+            <a href="/multimodal" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+    </div>
+      <!-- Background Video -->
+      <video autoplay muted loop class="background-video">
+        <source src="static\images\bg vedio.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="color-overlay"></div>
+  </section>
+  
+ <!-- Model Section -->
+ <section id="models" class="section">
+  <h2>Models and Diagnostic Approach</h2>
+  <!-- Brief Introductory Paragraph -->
+  <p>
+      This section details the MRI and Clinical models used for Alzheimer's prediction. 
+      These models, when combined, provide a robust and multimodal approach to early detection, 
+      leveraging neural networks for image processing and clinical insights for enhanced accuracy.
+  </p>
+
+  <!-- Layout: A mix of text, visuals, and highlights -->
+  <div class="models-grid">
+     
+      <div class="textual-content">
+        <h3>Model Architecture and Workflow</h3>
+        <p><strong>Clinical Model:</strong> Analyzes demographic, cognitive, and test data.</p>
+        <p><strong>MRI Model:</strong> Classifies images into four categories (Non-Demented, Mild Demented, Moderate Demented, Severe Demented) using CNNs.</p>
+        <p><strong>Integration:</strong> Combines outputs via multimodal fusion with an accuracy of 94.3%.</p>
+        
+        <h4>Download Models</h4>
+        <div class="model-download" >
+            <div>
+                <!-- <p><strong>Clinical Assessment Model:</strong> Test Accuracy: <span style="color: green; font-weight: bold;">73%</span></p> -->
+                <a href="/download/clinical-model" class="download-button"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" id="arrow">
+                  <path d="M13.002 0C5.828 0 0 5.824 0 12.998 0 20.172 5.828 26 13.002 26S26 20.172 26 12.998 20.176 0 13.002 0zm0 1A11.99 11.99 0 0 1 25 12.998c0 6.633-5.365 12-11.998 12-6.633 0-12.002-5.367-12.002-12S6.369 1 13.002 1zM11.5 5.998v.01a.5.5 0 0 0-.5.5v7.508h-.254l-2.244-.012a.5.5 0 0 0-.373.836l4.512 5a.5.5 0 0 0 .742 0l4.488-4.973a.5.5 0 0 0-.369-.836l-2.244-.01-.262-.01V6.499a.5.5 0 0 0-.5-.5H11.5z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"></path>
+                </svg> Clinical Model</a>
+            </div>
+            <div>
+                <!-- <p><strong>MRI Scan Model (Large):</strong> Test Accuracy: <span style="color: green; font-weight: bold;">90.05%</span></p> -->
+                <a href="/download/mri-large-model" class="download-button"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" id="arrow">
+                  <path d="M13.002 0C5.828 0 0 5.824 0 12.998 0 20.172 5.828 26 13.002 26S26 20.172 26 12.998 20.176 0 13.002 0zm0 1A11.99 11.99 0 0 1 25 12.998c0 6.633-5.365 12-11.998 12-6.633 0-12.002-5.367-12.002-12S6.369 1 13.002 1zM11.5 5.998v.01a.5.5 0 0 0-.5.5v7.508h-.254l-2.244-.012a.5.5 0 0 0-.373.836l4.512 5a.5.5 0 0 0 .742 0l4.488-4.973a.5.5 0 0 0-.369-.836l-2.244-.01-.262-.01V6.499a.5.5 0 0 0-.5-.5H11.5z" color="#000" font-family="sans-serif" font-weight="400" overflow="visible" style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal"></path>
+                </svg> MRI Model</a>
+            </div>
+            <!-- <div>
+                <p><strong>MRI Scan Model (Medium):</strong> Test Accuracy: <span style="color: green; font-weight: bold;">94.7%</span></p>
+                <a href="/download/mri-medium-model" class="download-button">Download Medium MRI Model</a>
+            </div> -->
+        </div>
+    </div>
+    
+
+      <!-- Column 2: Flowcharts/Architecture Visuals -->
+   <!-- Column 2: Flowcharts/Architecture Visuals -->
+<div class="visuals">
+  <h3>Workflow Overview</h3>
+  <div class="flowcharts">
+      <!-- Images displayed side by side -->
+      <div class="image-container">
+          <div class="flowchart-box">
+              <img src="static/images/mrimodelchart.png" alt="MRI Model Workflow" class="flowchart">
+              <p class="caption">MRI Model Processing Pipeline</p>
+          </div>
+          <div class="flowchart-box">
+              <img src="static/images/cliflow.jpg" alt="Clinical Model Workflow" class="flowchart">
+              <p class="caption">Clinical Data Analysis Flow</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+      <!-- Column 3: MRI Scans and Highlights -->
+      <div class="mri-section">
+          <h3>Sample MRI Scans and Insights</h3>
+          <div class="grid">
+              <!-- Replace these images with actual MRI scans -->
+              <div class="box mri-scan">
+                  <h4>Non-Demented</h4>
+                  <img src="static\images\non-demented.jpg" alt="Non-Demented MRI Scan">
+              </div>
+              <div class="box mri-scan">
+                <h4>Very Mild Demented</h4>
+                <img src="static\images\verymild-demented.jpg" alt="Severe Demented MRI Scan">
+            </div>
+              <div class="box mri-scan">
+                  <h4>Mild Demented</h4>
+                  <img src="static\images\mild-d.jpg" alt="Mild Demented MRI Scan">
+              </div>
+              <div class="box mri-scan">
+                  <h4>Moderate Demented</h4>
+                  <img src="static\images\moderate-d.jpg" alt="Moderate Demented MRI Scan">
+              </div>
+             
+          </div>
+        
+      </div>
+  </div>
+</section>
+
+
+  <!-- Dataset Section -->
+  <section id="dataset" class="section">
+    <h2>Dataset</h2>
+    <p>Access our comprehensive dataset for Alzheimer's detection research. We have utilized multiple publicly available datasets to build robust models for predicting Alzheimer's disease progression, combining both neuroimaging and clinical assessment data.</p>
+
+    <table  cellpadding="10"  >
+      <thead>
+
+          <tr>
+              <th>Dataset Name</th>
+              <th>Source</th>
+              <th>Original Source</th>
+              <th>Size</th>
+              <th>Classes</th>
+              <th>Augmentation</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Alzheimer's Disease Clinical Dataset</td>
+          <td><a href="https://www.kaggle.com/datasets/rabieelkharoua/alzheimers-disease-dataset/data" style="color: blue;" target="_blank">Kaggle</a></td>
+          <td>N/A</td>
+          <td>~2,149 samples</td>
+          <td>Demographics,Clinical Measurements,Cognitive Assessments,Symptoms...</td>
+          <td>Yes</td>
+      </tr>
+          <tr>
+              <td>OASIS (Open Access Series of Imaging Studies)</td>
+              <td><a href="https://www.kaggle.com/code/kirollosashraf/oasis-alzheimer-s-detection" target="_blank" style="color: blue">Kaggle</a></td>
+              <td><a href="https://sites.wustl.edu/oasisbrains/" target="_blank">OASIS Brains</a></td>
+              <td>~2,500 samples</td>
+              <td>All 4 Classes</td>
+              <td>No</td>
+          </tr>
+          <tr>
+              <td>Alzheimer MRI Dataset</td>
+              <td><a href="https://www.kaggle.com/datasets/marcopinamonti/alzheimer-mri-4-classes-dataset" target="_blank" style="color: blue">Kaggle</a></td>
+              <td><a href="https://sites.wustl.edu/oasisbrains/" target="_blank">OASIS Brains</a></td>
+              <td>~3,500 samples</td>
+              <td>All 4 Classes</td>
+              <td>No</td>
+          </tr>
+          <tr>
+              <td>Augmented Alzheimer's Multiclass Dataset</td>
+              <td><a href="https://www.kaggle.com/datasets/aryansinghal10/alzheimers-multiclass-dataset-equal-and-augmented" target="_blank" style="color: blue">Kaggle</a></td>
+              <td><a href="https://sites.wustl.edu/oasisbrains/" target="_blank">OASIS Brains</a></td>
+              <td>~10,000 samples</td>
+              <td>All 4 Classes(Non-Demented,Verymild-demented,Mild-demented,Moderate-demented)</td>
+              <td>Yes</td>
+          </tr>
+          
+      </tbody>
+  </table>
+  </section>
+
+  <!-- About Us Section -->
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are dedicated to developing cutting-edge solutions to assist medical research and improve healthcare outcomes.</p>
+  </section>
+
+  <!-- Research Papers Section -->
+  <section id="research" class="section">
+    <h2>Research Papers</h2>
+    <p>Explore our published research papers and studies on Alzheimer's detection and progression analysis.</p>
+  </section>
+</body>
+
+<script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+</script>
+</html>
