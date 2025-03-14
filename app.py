@@ -157,7 +157,7 @@ def multimodal_prediction():
         mri_image = request.files['mri_image']
         mri_presence, mri_stage = predict_mri_with_stage(mri_image)
         final_result, stage = multimodal_predict_with_stage(clinical_data, mri_presence, mri_stage)
-        result = "Alzheimer's Detected" if final_result == 1 else "No Alzheimer's Detected"
+        result = " Alzheimer's Detected" if final_result == 1 else "No Alzheimer's Detected"
         return render_template('result.html', result=result, stage=stage)
     return render_template('multimodal.html')
 

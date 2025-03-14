@@ -1,10 +1,114 @@
-<html><head> <link rel="stylesheet" href="static\css\styles.css"></head>
+<html>
+<head>
+    <style>
+        :root {
+  --color-dark-blue: #001A6E;
+  --color-medium-blue: #074799;
+  --color-navy: #1B1833;
+  --color-white: #FBFBFB;
+  --color-purple: #402E7A;
+  --color-bright-purple: #4C3BCF;
+  --color-light-blue: #4B70F5;
+  --color-cyan: #3DC2EC;
+  --color-dark-gray: #1A2130;
+}
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--color-navy);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container Styling */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 900px;
+        }
+
+        /* Result Section */
+        .result {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .result h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .result p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* Download Section */
+        .download-section {
+            flex-shrink: 0;
+            margin-left: 20px;
+        }
+
+        .download-btn {
+            background-color: var(--color-light-blue);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: var(--color-bright-purple);
+        }
+
+        /* Go Back Link */
+        .go-back {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 16px;
+            color:var(--color-white);
+        }
+
+        .go-back:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
 <body>
-    <h1>Prediction Result</h1>
-    <p>{{ result }}</p>
-    {% if stage %}
-    <p>Stage: {{ stage }}</p>
-    {% endif %}
-    <a href="/">Go Back</a>
+    <div class="container">
+        <div class="result">
+            <h1>Prediction Result</h1>
+            <p>{{ result }}</p>
+            {% if stage %}
+                <p>Stage: {{ stage }}</p>
+            {% endif %}
+        </div>
+        
+        <div class="download-section">
+            <a href="/download_report" class="download-btn">Download Report</a>
+        </div>
+    </div>
+    <div><a href="/" class="go-back">Go Back</a></div>
+    
 </body>
 </html>
