@@ -6,3 +6,12 @@ numpy
 pillow
 scikit-learn
 pandas
+flask_sqlalchemy
+flask_bcrypt
+flask_login
+psycopg2
+psycopg2-binary
+asyncpg
+flask-jwt-extended
+flask-cors
+flask-sqlalchemy

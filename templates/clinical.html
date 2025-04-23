@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,11 +10,15 @@
     
     <div class="container">
       <h1>Clinical Data Entry</h1>
+      <div class="name-field">
+        <label for="name" class="form-label">Patient Name:</label>
+        <input type="text" id="name" name="name" required class="form-input">
+      <div>
       <div class="form-container">
-        <!-- Form Section -->
+
         <div class="form-wrapper">
             <form method="POST" action="/clinical" class="clinical-form">
-                <!-- Personal Details Section -->
+           
                 <div class="form-section">
                   <label for="age" class="form-label">Age:</label>
                   <input type="number" id="age" name="age" required class="form-input" />
@@ -60,8 +64,7 @@
                     <option value="No">No</option>
                   </select>
                 </div>
-              
-                <!-- Medical History Section -->
+             
                 <div class="form-section">
                   <label for="cardiovascular_disease" class="form-label">Cardiovascular Disease History:</label>
                   <select id="cardiovascular_disease" name="cardiovascular_disease" required class="form-input">
@@ -109,7 +112,6 @@
                   <input type="number" id="cholesterol_hdl" name="cholesterol_hdl" required class="form-input" />
                 </div>
               
-                <!-- Cognitive Assessment Section -->
                 <div class="form-section">
                   <label for="cholesterol_triglycerides" class="form-label">Triglycerides:</label>
                   <input type="number" id="cholesterol_triglycerides" name="cholesterol_triglycerides" required class="form-input" />
@@ -159,7 +161,6 @@
                     <option value="No">No</option>
                   </select>
               
-                  <!-- <button type="submit" class="submit-btn">Submit</button> -->
                 </div>
               </form>
             
@@ -168,4 +169,210 @@
       </div>
     </div>
   </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/css/multimodel.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Prediction</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Clinical Assessment</h1>
+
+
+        <!-- Clinical Info Section -->
+        <div class="form-container">
+            <div class="form-wrapper">
+                <form method="POST" action="/clinical" enctype="multipart/form-data" class="clinical-form" id="multimodal-form">
+
+                    
+        <!-- Personal Info Section -->
+         
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            
+            <label for="name" class="form-label">Patient Name:</label>
+            <input type="text" id="name" name="name" required class="form-input">
+
+            <label for="dob" class="form-label">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required class="form-input">
+
+            <label for="contact" class="form-label">Contact Number:</label>
+            <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" maxlength="10" required class="form-input" >
+
+                <label for="age" class="form-label">Age:</label>
+                <input type="number" id="age" name="age" required class="form-input">
+
+                    <label for="gender" class="form-label">Gender:</label>
+                    <select id="gender" name="gender" required class="form-input">
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                    <label for="education" class="form-label">Education Level:</label>
+                    <select id="education" name="education" required class="form-input">
+                        <option value="">Select</option>
+                        <option value="None">None</option>
+                        <option value="Bachelors">Bachelors</option>
+                        <option value="Higher">Higher</option>
+                        <option value="Masters">Masters</option>
+                    </select>   
+           
+       
+                        <label for="bmi" class="form-label">Body Mass Index (BMI):</label>
+                        <input type="number" step="0.1" id="bmi" name="bmi" required class="form-input">
+
+                        <label for="personality_changes" class="form-label">Personality Changes:</label>
+                        <select id="personality_changes" name="personality_changes" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    
+
+                    </div>
+                    <!-- Lifestyle Info -->
+                    <div class="form-section">
+                        
+                        <h2>Clinical Information</h2>
+
+                        <label for="family_history" class="form-label">Family History of Alzheimer's:</label>
+                        <select id="family_history" name="family_history" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="cardiovascular_disease" class="form-label">Cardiovascular Disease History:</label>
+                        <select id="cardiovascular_disease" name="cardiovascular_disease" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="diabetes" class="form-label">Diabetes History:</label>
+                        <select id="diabetes" name="diabetes" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="depression" class="form-label">Depression History:</label>
+                        <select id="depression" name="depression" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="head_injury" class="form-label">Head Injury History:</label>
+                        <select id="head_injury" name="head_injury" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="hypertension" class="form-label">Hypertension History:</label>
+                        <select id="hypertension" name="hypertension" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="difficulty_completing_tasks" class="form-label">Difficulty Completing Tasks:</label>
+                        <select id="difficulty_completing_tasks" name="difficulty_completing_tasks" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="forgetfulness" class="form-label">Forgetfulness:</label>
+                        <select id="forgetfulness" name="forgetfulness" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+
+</div>
+
+                       
+                    
+
+                    <!-- Medical History Section -->
+                    
+                  
+            
+                    <div class="form-section">
+                        
+                        <label for="systolic_bp" class="form-label">Systolic Blood Pressure:</label>
+                        <input type="number" id="systolic_bp" name="systolic_bp" required class="form-input">
+
+                        <label for="diastolic_bp" class="form-label">Diastolic Blood Pressure:</label>
+                        <input type="number" id="diastolic_bp" name="diastolic_bp" required class="form-input">
+
+                        <label for="cholesterol_total" class="form-label">Total Cholesterol:</label>
+                        <input type="number" id="cholesterol_total" name="cholesterol_total" required class="form-input">
+
+                        <label for="cholesterol_ldl" class="form-label">LDL Cholesterol:</label>
+                        <input type="number" id="cholesterol_ldl" name="cholesterol_ldl" required class="form-input">
+
+                        <label for="cholesterol_hdl" class="form-label">HDL Cholesterol:</label>
+                        <input type="number" id="cholesterol_hdl" name="cholesterol_hdl" required class="form-input">
+
+                        <label for="cholesterol_triglycerides" class="form-label">Triglycerides:</label>
+                        <input type="number" id="cholesterol_triglycerides" name="cholesterol_triglycerides" required class="form-input">
+
+                        <label for="mmse" class="form-label">MMSE Score:</label>
+                        <input type="number" id="mmse" name="mmse" required class="form-input">
+
+                        <label for="smoking" class="form-label">Smoking History:</label>
+                        <select id="smoking" name="smoking" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        <label for="alcohol" class="form-label">Alcohol Consumption (0-20):</label>
+                        <input type="number" id="alcohol" name="alcohol" min="0" max="20" required class="form-input">
+
+                    </div>
+
+                    <!-- Cognitive Assessment Section -->
+                    <div class="form-section">
+                        
+                        <label for="physical_activity" class="form-label">Physical Activity Level (1-10):</label>
+                        <input type="number" id="physical_activity" name="physical_activity" min="1" max="10" required class="form-input">
+
+                        <label for="diet_quality" class="form-label">Diet Quality (1-10):</label>
+                        <input type="number" id="diet_quality" name="diet_quality" min="1" max="10" required class="form-input">
+
+                        <label for="sleep_quality" class="form-label">Sleep Quality (1-10):</label>
+                        <input type="number" id="sleep_quality" name="sleep_quality" min="1" max="10" required class="form-input">
+                        
+                        <label for="memory_complaints" class="form-label">Memory Complaints:</label>
+                        <select id="memory_complaints" name="memory_complaints" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="behavioral_problems" class="form-label">Behavioral Problems:</label>
+                        <select id="behavioral_problems" name="behavioral_problems" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select> 
+
+                        <label for="confusion" class="form-label">Confusion Symptoms:</label>
+                        <select id="confusion" name="confusion" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+
+                        <label for="disorientation" class="form-label">Disorientation Symptoms:</label>
+                        <select id="disorientation" name="disorientation" required class="form-input">
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                        
+                    </div>
+
+                  
+                </form>
+                <button type="submit" form="multimodal-form" class="submit-btn">Submit</button>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
+
